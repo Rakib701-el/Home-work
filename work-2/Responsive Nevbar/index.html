@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Responsive Navbar</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #0a9650;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            color: rgba(122, 5, 201, 0.863);
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .menu a {
+            color: rgb(221, 14, 14);
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.2s;
+        }
+
+        @media (max-width: 500px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .menu {
+                flex-direction: column;
+                width: 100%;
+                margin-top: 10px;
+                text-align: center;
+            }
+
+            .menu a {
+                padding: 10px 0;
+                width: 100%;
+                border-bottom: 1px solid #faf8f8;
+            }
+        }
+
+        .form-container {
+            margin: auto;
+            background: rebeccapurple;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            margin-top: 40px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #da0d28c7;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #faf8f8;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid red;
+            border-radius: 5px;
+            transition: all 0.5s;
+        }
+
+        input:focus {
+            border-color: rgb(228, 179, 170);
+            box-shadow: 0 0 8px rgba(177, 40, 16, 0.6);
+            outline: none;
+        }
+
+
+        button {
+            width: 200px;
+            border-radius: 5px;
+            border: none;
+            background-color: #0a9650;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            transition-duration: 0.4s;
+        }
+
+
+
+        button:hover {
+            background-color: #faf8f8;
+            color: #0a9650;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">MyLogo</div>
+        <div class="menu">
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Services</a>
+            <a href="">Contact</a>
+        </div>
+    </nav>
+
+    <div class="form-container">
+        <h2>Login Form</h2>
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" />
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" />
+            <button type="submit" value="Submit"> Log In</button>
+        </form>
+    </div>
+</body>
+
+</html>

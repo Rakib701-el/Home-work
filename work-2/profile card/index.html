@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Profile Card</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans",
+                "Helvetica Neue", Arial;
+            background: linear-gradient(180deg, #f6f8fb 0%, #ffffff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .profile-card {
+            width: 340px;
+            margin: 20px;
+            padding: 18px;
+            border: 1px solid #e0e6ef;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 8px 28px rgba(20, 30, 50, 0.08);
+            text-align: center;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 14px;
+            padding: 4px;
+            border: 2px solid #f0f4ff;
+            border-radius: 50%;
+            overflow: hidden;
+            display: inline-block;
+            background: linear-gradient(135deg, #eaf1ff, #fff);
+        }
+
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+
+        h2 {
+            margin: 8px 0 4px;
+            font-size: 1.15rem;
+            color: #0f1724;
+        }
+
+
+        .role {
+            margin: 0 0 12px;
+            font-size: 0.9rem;
+            color: #55657a;
+        }
+
+
+        .bio {
+            margin: 0 0 16px;
+            padding: 0 6px;
+            font-size: 0.95rem;
+            line-height: 1.45;
+            color: #374151;
+        }
+
+
+        .meta {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 8px;
+        }
+
+
+        .btn {
+            padding: 8px 14px;
+            border-radius: 8px;
+            border: 1px solid transparent;
+            background: #0b6efd;
+            color: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+
+        .btn.secondary {
+            background: transparent;
+            color: #0b6efd;
+            border-color: #dbe8ff;
+            box-shadow: none;
+        }
+
+        @media (max-width: 380px) {
+            .profile-card {
+                width: 92%;
+                padding: 14px;
+            }
+
+            .avatar {
+                width: 96px;
+                height: 96px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <article class="profile-card" aria-label="User profile card">
+        <div class="avatar" aria-hidden="true">
+            <img src="img.jpg" alt="Profile card" />
+        </div>
+
+
+        <h2>MD Rakibul Islam</h2>
+        <p class="role"><em>Web Developer</em></p>
+
+
+        <p class="bio">
+            <strong>I am a Web Developer skilled in HTML, CSS, and
+                JavaScript. I create responsive and user-friendly websites, focusing
+                on clean code and modern solutions.</strong>
+        </p>
+
+
+        <div class="meta">
+            <a class="btn" href="#contact">Contact Me</a>
+            <a class="btn secondary" href="#portfolio">Show Your Work</a>
+        </div>
+    </article>
+</body>
+
+</html>
